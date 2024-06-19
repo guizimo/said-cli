@@ -6,14 +6,14 @@ import {templateList, templateMap} from "@/config/template";
 import ora from "ora";
 import chalk from "chalk";
 import gitClone from "git-clone";
-import {endMessage, welcomeMessage} from "@/config/message";
+import { endMessage, welcomeMessage } from "@/config/message";
 
 // 初始化日志服务
 const logger = new Logger()
 
 /**
  * 创建项目指令
- * @param params
+ * @param params 参数
  */
 export const createExec = async (params: string[]) => {
   try {
@@ -29,6 +29,7 @@ export const createExec = async (params: string[]) => {
 
 /**
  * 选择项目模板
+ * @param projectName 项目名称
  */
 const selectProjectAndDownload = async (projectName: string) => {
   const answer = await inquirer.prompt([
@@ -65,16 +66,22 @@ const selectProjectAndDownload = async (projectName: string) => {
   }
 }
 
-// 校验参数
+/**
+ * 校验参数
+ * @param params 参数
+ */
 const validateParams = (params: string[]) => {
   if (!params[0]) {
     throw new Error("Please enter a project name!");
   }
-  //  只取第一个参数
+  // 只取第一个参数
   return params[0];
 }
 
-// 判断当前目录下是否存在同名文件
+/**
+ * 判断当前目录下是否存在同名文件
+ * @param name 名称
+ */
 const validateProjectName = async (name: string) => {
   const targetPath = path.join(process.cwd(), name);
   if (fs.existsSync(targetPath)) {

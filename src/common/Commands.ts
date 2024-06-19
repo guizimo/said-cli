@@ -1,8 +1,13 @@
+import {LIBRARY_NAME} from "@/config/config";
+
+/**
+ * 命令类
+ */
 export default class Commands {
   main: string
 
   constructor() {
-    this.main = "said-cli"
+    this.main = LIBRARY_NAME
   }
 
   /**

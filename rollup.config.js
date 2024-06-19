@@ -1,10 +1,10 @@
-import typescript from "rollup-plugin-typescript2"; // 处理typescript
+import typescript from "rollup-plugin-typescript2";
 import babel from "@rollup/plugin-babel";
 import alias from "@rollup/plugin-alias";
 import path from 'path';
 import json from "@rollup/plugin-json";
-import commonjs from "@rollup/plugin-commonjs";
 
+// 获取当前文件所在目录的绝对路径
 const projectRootDir = path.dirname(import.meta.url);
 
 export default [
@@ -12,7 +12,6 @@ export default [
     input: "src/main.ts",
     plugins: [
       json(),
-      // commonjs(),
       typescript(),
       babel({
         babelrc: false,

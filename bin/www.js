@@ -8,9 +8,15 @@ import ora from 'ora';
 import gitClone from 'git-clone';
 import figlet from 'figlet';
 
+// 库名称
+const LIBRARY_NAME = 'said-cli';
+
+/**
+ * 命令类
+ */
 class Commands {
     constructor() {
-        this.main = "said-cli";
+        this.main = LIBRARY_NAME;
     }
     /**
      * 对外暴露，获取命令集
@@ -27,14 +33,14 @@ class Commands {
 }
 
 var name = "said-cli";
-var version = "0.0.1";
-var description = "quickly generate scaffolding for project templates";
+var version = "0.0.2";
+var description = "Quickly generate scaffolding for project templates";
 var main$1 = "bin/www.js";
 var type = "module";
 var scripts = {
 	dev: "rimraf bin && rollup -c rollup.config.js -w",
 	build: "rimraf bin && rollup -c rollup.config.js",
-	link: "npm unlink -g said-cli && npm link"
+	"test:link": "npm unlink -g said-cli && npm link"
 };
 var bin = {
 	"said-cli": "./bin/www.js"
@@ -48,7 +54,7 @@ var keywords = [
 ];
 var repository = {
 	type: "git",
-	url: "https://github.com/SaidBaseTemplate/said-cli.git"
+	url: "https://github.com/guizimo/said-cli.git"
 };
 var author = "guizimo";
 var license = "MIT";
@@ -113,22 +119,31 @@ const chalkLog = (type, msg, bold) => {
     const handler = bold ? chalk.bold[color](msg) : chalk[color](msg);
     return console.log(handler);
 };
+/**
+ * 日志类
+ */
 class Logger {
+    // 成功
     success(msg, bold = false) {
         return chalkLog("success", msg, bold);
     }
+    // 输出
     info(msg, bold = false) {
         return chalkLog("info", msg, bold);
     }
+    // 警告
     warn(msg, bold = false) {
         return chalkLog("warn", msg, bold);
     }
+    // 错误
     error(msg, bold = false) {
         return chalkLog("error", msg, bold);
     }
 }
 
+// 初始化日志服务
 const logger$2 = new Logger();
+// 模板映射
 const templateMap = [
     {
         name: "rollup-library",
@@ -146,11 +161,11 @@ const templateList = [
         description: 'Rollup 命令行工具模板',
         url: 'https://github.com/SaidBaseTemplate/rollup-library-ts.git',
         successFn: (projectName) => {
+            logger$2.info('');
             logger$2.info('Run the following command to start the project:', true);
-            logger$2.info('', true);
-            logger$2.info(`cd ${projectName}`, true);
-            logger$2.info('npm i', true);
-            logger$2.info('npm run dev', true);
+            logger$2.info(`cd ${projectName}`);
+            logger$2.info('npm i');
+            logger$2.info('npm run dev');
         }
     },
     {
@@ -193,23 +208,24 @@ const templateList = [
 
 // 初始化日志服务
 const logger$1 = new Logger();
+// 欢迎信息
 const welcomeMessage = () => {
-    logger$1.info('', true);
-    logger$1.info(figlet.textSync("said-cli", {}), true);
-    logger$1.info('Welcome to said-cli!');
-    logger$1.info('', true);
+    logger$1.info('');
+    logger$1.info(figlet.textSync(LIBRARY_NAME, {}), true);
+    logger$1.info(`Welcome to ${LIBRARY_NAME}!`);
+    logger$1.info('');
 };
+// 结束信息
 const endMessage = () => {
-    logger$1.info('', true);
-    logger$1.info(figlet.textSync("zrOvO", {}), true);
-    logger$1.info('Thank you for your use!');
+    logger$1.info('');
+    logger$1.info(`Thank you for your use ${LIBRARY_NAME}!`, true);
 };
 
 // 初始化日志服务
 const logger = new Logger();
 /**
  * 创建项目指令
- * @param params
+ * @param params 参数
  */
 const createExec = async (params) => {
     try {
@@ -225,6 +241,7 @@ const createExec = async (params) => {
 };
 /**
  * 选择项目模板
+ * @param projectName 项目名称
  */
 const selectProjectAndDownload = async (projectName) => {
     const answer = await inquirer.prompt([
@@ -261,15 +278,21 @@ const selectProjectAndDownload = async (projectName) => {
         throw new Error("The template not exist!");
     }
 };
-// 校验参数
+/**
+ * 校验参数
+ * @param params 参数
+ */
 const validateParams = (params) => {
     if (!params[0]) {
         throw new Error("Please enter a project name!");
     }
-    //  只取第一个参数
+    // 只取第一个参数
     return params[0];
 };
-// 判断当前目录下是否存在同名文件
+/**
+ * 判断当前目录下是否存在同名文件
+ * @param name 名称
+ */
 const validateProjectName = async (name) => {
     const targetPath = path.join(process.cwd(), name);
     if (fs.existsSync(targetPath)) {
@@ -290,6 +313,7 @@ const validateProjectName = async (name) => {
     }
 };
 
+// 导出模块
 var execs = {
     create: createExec
 };
@@ -298,11 +322,12 @@ function main() {
     // 初始化日志
     const logger = new Logger();
     // 初始化命令行参数
-    program.name("said-cli").description("A scaffolding tool for quickly pulling project templates.");
-    // 设置命令在前，选项在后
-    program.version("said-cli" + "@" + myPkg.version).usage("<command> [option]");
+    program.name(LIBRARY_NAME).description("A scaffolding tool for quickly pulling project templates.");
+    // 配置版本信息
+    program.version(LIBRARY_NAME + "@" + myPkg.version).usage("<command> [option]");
     // 初始化命令行参数
     const commands = new Commands();
+    // 获取命令列表
     const commandResolves = commands.resolve();
     for (let key in commandResolves) {
         const { alias, description } = commandResolves[key];
@@ -312,9 +337,10 @@ function main() {
             .description(description) // 配置命令描述
             .action(function (name, { args }) {
             try {
-                // 除了上述的命令，其他统统匹配到这里
+                // 未注册的命令
                 if (key === "*")
                     return logger.error(description);
+                // 执行命令
                 // @ts-ignore
                 return execs[key](args);
             }
@@ -327,4 +353,5 @@ function main() {
     // @ts-ignore
     program.parse(program.argv);
 }
+// 执行主函数
 main();

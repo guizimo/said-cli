@@ -1,7 +1,9 @@
 import Logger from "@/utils/Logger";
 
+// 初始化日志服务
 const logger = new Logger()
 
+// 模板映射
 export const templateMap = [
   {
     name: "rollup-library",

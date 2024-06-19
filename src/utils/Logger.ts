@@ -16,16 +16,23 @@ const chalkLog = (type: string, msg: string, bold: boolean) => {
   return console.log(handler)
 }
 
+/**
+ * 日志类
+ */
 export default class Logger {
+  // 成功
   success(msg: string, bold: boolean = false) {
     return chalkLog("success", msg, bold)
   }
+  // 输出
   info(msg: string, bold: boolean = false) {
     return chalkLog("info", msg, bold)
   }
+  // 警告
   warn(msg: string, bold: boolean = false) {
     return chalkLog("warn", msg, bold)
   }
+  // 错误
   error(msg: string, bold: boolean = false) {
     return chalkLog("error", msg, bold)
   }

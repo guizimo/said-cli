@@ -1,13 +1,13 @@
 {
   "name": "said-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Quickly generate scaffolding for project templates",
   "main": "bin/www.js",
   "type": "module",
   "scripts": {
     "dev": "rimraf bin && rollup -c rollup.config.js -w",
     "build": "rimraf bin && rollup -c rollup.config.js",
-    "link": "npm unlink -g said-cli && npm link"
+    "test:link": "npm unlink -g said-cli && npm link"
   },
   "bin": {
     "said-cli": "./bin/www.js"
