@@ -1,0 +1,55 @@
+{
+  "name": "said-cli",
+  "version": "0.0.1",
+  "description": "Quickly generate scaffolding for project templates",
+  "main": "bin/www.js",
+  "type": "module",
+  "scripts": {
+    "dev": "rimraf bin && rollup -c rollup.config.js -w",
+    "build": "rimraf bin && rollup -c rollup.config.js",
+    "link": "npm unlink -g said-cli && npm link"
+  },
+  "bin": {
+    "said-cli": "./bin/www.js"
+  },
+  "keywords": [
+    "rollup",
+    "ts",
+    "library",
+    "template",
+    "base"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guizimo/said-cli.git"
+  },
+  "author": "guizimo",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.24.7",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@types/figlet": "^1.5.8",
+    "@types/fs-extra": "^11.0.4",
+    "@types/git-clone": "^0.2.4",
+    "@types/inquirer": "^9.0.7",
+    "rimraf": "^5.0.7",
+    "rollup": "^4.18.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tslib": "^2.6.3",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "figlet": "^1.7.0",
+    "fs-extra": "^11.2.0",
+    "git-clone": "^0.2.0",
+    "inquirer": "^9.2.23",
+    "ora": "^8.0.1"
+  }
+}
