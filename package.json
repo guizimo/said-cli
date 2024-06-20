@@ -23,6 +23,10 @@
     "type": "git",
     "url": "https://github.com/guizimo/said-cli.git"
   },
+  "homepage": "github.com/guizimo/said-cli#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": "guizimo",
   "license": "MIT",
   "devDependencies": {
