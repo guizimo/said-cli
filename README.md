@@ -1,12 +1,11 @@
 
-<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img src="https://guizimo.oss-cn-shanghai.aliyuncs.com/img/said.jpg" alt="said" style="zoom:10%;" /></a></p>
+<p align="center"><a href="https://github.com/guizimo/said-cli" target="_blank" rel="noopener noreferrer"><img src="https://guizimo.oss-cn-shanghai.aliyuncs.com/img/said.png" alt="said-cli" /></a></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/said-cli"><img src="https://img.shields.io/npm/v/said-cli.svg?sanitize=true" alt="Version"></a>
   <a href="https://www.npmjs.com/package/said-cli"><img src="https://img.shields.io/npm/dm/said-cli.svg?sanitize=true" alt="Downloads"></a>
   <a href="https://github.com/guizimo/said-cli/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/said-cli.svg?sanitize=true" alt="License"></a>
 </p>
-
 
 ## ✨ 介绍
 
