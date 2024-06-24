@@ -115,9 +115,9 @@ said-cli create my-new-project
 
 如果你有任何问题或建议，请通过以下方式联系我：
 
-**Email**:  17680262548@163.com
+- **Email**:  17680262548@163.com
 
-**GitHub Issues**: [这里](https://github.com/guizimo/said-cli/issues)
+- **GitHub Issues**: [这里](https://github.com/guizimo/said-cli/issues)
 
 
 
