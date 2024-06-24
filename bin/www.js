@@ -33,14 +33,15 @@ class Commands {
 }
 
 var name = "said-cli";
-var version = "0.0.2";
+var version = "0.0.5";
 var description = "Quickly generate scaffolding for project templates";
 var main$1 = "bin/www.js";
 var type = "module";
 var scripts = {
 	dev: "rimraf bin && rollup -c rollup.config.js -w",
 	build: "rimraf bin && rollup -c rollup.config.js",
-	"test:link": "npm unlink -g said-cli && npm link"
+	"test:link": "npm unlink -g said-cli && npm link",
+	update: "npm version patch && npm run build"
 };
 var bin = {
 	"said-cli": "./bin/www.js"
@@ -55,6 +56,10 @@ var keywords = [
 var repository = {
 	type: "git",
 	url: "https://github.com/guizimo/said-cli.git"
+};
+var homepage = "github.com/guizimo/said-cli#readme";
+var publishConfig = {
+	registry: "https://registry.npmjs.org/"
 };
 var author = "guizimo";
 var license = "MIT";
@@ -95,6 +100,8 @@ var myPkg = {
 	bin: bin,
 	keywords: keywords,
 	repository: repository,
+	homepage: homepage,
+	publishConfig: publishConfig,
 	author: author,
 	license: license,
 	devDependencies: devDependencies,
