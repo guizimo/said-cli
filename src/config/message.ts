@@ -1,6 +1,6 @@
 import figlet from "figlet";
 import Logger from "@/utils/Logger";
-import { LIBRARY_NAME } from "@/config/config";
+import {ISSUE_ADDRESS, LIBRARY_NAME} from "@/config/config";
 
 // 初始化日志服务
 const logger = new Logger()
@@ -18,3 +18,9 @@ export const endMessage = () => {
   logger.info('')
   logger.info(`Thank you for your use ${LIBRARY_NAME}!`, true)
 }
+
+// 错误信息
+export const errorMessage = () => {
+  logger.info('');
+  logger.info(`If the above does not solve your problem, please check here: ${ISSUE_ADDRESS}!`, true);
+};

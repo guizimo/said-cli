@@ -6,7 +6,7 @@ import {templateList, templateMap} from "@/config/template";
 import ora from "ora";
 import chalk from "chalk";
 import gitClone from "git-clone";
-import { endMessage, welcomeMessage } from "@/config/message";
+import {endMessage, errorMessage, welcomeMessage} from "@/config/message";
 
 // 初始化日志服务
 const logger = new Logger()
@@ -23,6 +23,7 @@ export const createExec = async (params: string[]) => {
     await selectProjectAndDownload(projectName)
   } catch (e) {
     logger.error(e.message)
+    errorMessage()
     process.exit(0)
   }
 }
