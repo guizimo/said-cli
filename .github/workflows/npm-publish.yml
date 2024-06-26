@@ -9,7 +9,7 @@ on:
     # paths:
     #   - 'src/'
     tags:
-      - '**'
+      - '*'
 
 jobs:
   build:
