@@ -8,7 +8,9 @@
     "dev": "rimraf bin && rollup -c rollup.config.js -w",
     "build": "rimraf bin && rollup -c rollup.config.js",
     "test:link": "npm unlink -g said-cli && npm link",
-    "update": "npm version patch"
+    "update": "npm version patch",
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "bin": {
     "said-cli": "./bin/www.js"
@@ -42,6 +44,9 @@
     "@types/fs-extra": "^11.0.4",
     "@types/git-clone": "^0.2.4",
     "@types/inquirer": "^9.0.7",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
     "rimraf": "^5.0.7",
     "rollup": "^4.18.0",
     "rollup-plugin-typescript2": "^0.36.0",
@@ -56,5 +61,8 @@
     "git-clone": "^0.2.0",
     "inquirer": "^9.2.23",
     "ora": "^8.0.1"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,json}": "prettier --write ."
   }
 }
