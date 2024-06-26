@@ -1,11 +1,19 @@
 
-<p align="center"><a href="https://github.com/guizimo/said-cli" target="_blank" rel="noopener noreferrer"><img src="https://guizimo.oss-cn-shanghai.aliyuncs.com/img/said.png" alt="said-cli" /></a></p>
+<p align="center"><a href="https://github.com/guizimo/said-cli" target="_blank" rel="said-cli"><img src="https://guizimo.oss-cn-shanghai.aliyuncs.com/img/said.png" alt="said-cli" /></a></p>
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/said-cli"><img src="https://img.shields.io/npm/v/said-cli.svg?sanitize=true" alt="Version"></a>
-  <a href="https://www.npmjs.com/package/said-cli"><img src="https://img.shields.io/npm/dm/said-cli.svg?sanitize=true" alt="Downloads"></a>
-  <a href="https://github.com/guizimo/said-cli/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/said-cli.svg?sanitize=true" alt="License"></a>
-</p>
+
+<div align="center">
+
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Rollup](https://img.shields.io/badge/Packing-Rollup-FF3333.svg)](https://github.com/guizimo/said-cli)
+[![Typescript](https://img.shields.io/badge/Language-Typescript-3078C6.svg)](https://github.com/guizimo/said-cli)
+[![Version](https://img.shields.io/npm/v/said-cli.svg?sanitize=true)](https://www.npmjs.com/package/said-cli)
+[![Downloads](https://img.shields.io/npm/dm/said-cli.svg?sanitize=true)](https://www.npmjs.com/package/said-cli)
+[![License](https://img.shields.io/github/license/guizimo/said-cli)](https://github.com/guizimo/said-cli/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/guizimo/said-cli)](https://github.com/guizimo/said-cli)
+
+</div>
+
 
 ## ✨ 介绍
 
@@ -14,7 +22,7 @@
 ## 特性
 
 - 🛠️ 快速拉取模板项目
-- 📦 支持多种语言和框架（如Vue、React、Node.js等）
+- 📦 支持多种语言和框架（如Vue、React、Node.js、Rollup等）
 - ⚡ 高效的项目初始化
 - 🔄 模板丰富，更新迅速
 - 🔧 简单的配置和自定义
@@ -89,11 +97,11 @@ said-cli create my-new-project
 
 以下是一些可用的模板：
 
-| 模板名称          | 模板简介                                                    | 模版地址                                              |
-| ----------------- | ----------------------------------------------------------- | ----------------------------------------------------- |
-| rollup-library-ts | `Rollup+Ts`项目模板，可用于快速开发命令行工具、库、插件等。 | https://github.com/SaidBaseTemplate/rollup-library-ts |
-| rollup-base-ts    | Rollup+Ts基础模版，快速搭建基于Rollup+Ts的模板，快速开发    | https://github.com/SaidBaseTemplate/rollup-base-ts    |
-|                   |                                                             |                                                       |
+| 模板名称          | 模板简介                                  | 模版地址                                              |
+| ----------------- |---------------------------------------| ----------------------------------------------------- |
+| rollup-library-ts | `Rollup+Ts`项目模板，可用于快速开发命令行工具、库、插件等。   | https://github.com/SaidBaseTemplate/rollup-library-ts |
+| rollup-base-ts    | `Rollup+Ts`基础模版，快速搭建基于`Rollup+Ts`的模板，快速开发 | https://github.com/SaidBaseTemplate/rollup-base-ts    |
+|                   |                                       |                                                       |
 
 欢迎大家一起完善`said-cli`的模板！
 
