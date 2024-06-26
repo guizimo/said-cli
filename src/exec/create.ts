@@ -39,17 +39,10 @@ const selectProjectAndDownload = async (projectName: string) => {
       default: "rollup-library",
       name: "template",
       choices: templateMap,
-    },
-    {
-      type: "confirm",
-      message: "Do you want to use typescript?",
-      name: "isTs",
-      default: "false",
-    },
+    }
   ]);
   // 拼接项目模板
-  const templateName = answer.template + (answer.isTs ? "-ts" : "");
-  const find = templateList.find((item) => item.name === templateName)
+  const find = templateList.find((item) => item.name === answer.template)
   if (find) {
     // 显示加载条
     const spinner = ora("Downloading template...").start();
