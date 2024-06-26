@@ -1,13 +1,13 @@
-import {LIBRARY_NAME} from "@/config/config";
+import { LIBRARY_NAME } from '@/config/config';
 
 /**
  * 命令类
  */
 export default class Commands {
-  main: string
+  main: string;
 
   constructor() {
-    this.main = LIBRARY_NAME
+    this.main = LIBRARY_NAME;
   }
 
   /**
@@ -16,10 +16,10 @@ export default class Commands {
   resolve() {
     return {
       create: {
-        alias: "",
-        description: "Quickly create a project.",
-        examples: [this.main + "create <project-name>"]
-      },
-    }
+        alias: '',
+        description: 'Quickly create a project.',
+        examples: [this.main + 'create <project-name>']
+      }
+    };
   }
 }
