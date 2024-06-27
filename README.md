@@ -105,6 +105,10 @@ said-cli create my-new-project
 
 欢迎大家一起完善`said-cli`的模板！
 
+## 更新日志
+
+[**Changelog**](./CHANGELOG.md) - 查看项目的更新日志
+
 ## 贡献
 
 欢迎任何形式的贡献！你可以通过以下方式贡献代码：
