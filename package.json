@@ -1,6 +1,6 @@
 {
   "name": "said-cli",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Quickly generate scaffolding for project templates",
   "main": "bin/www.js",
   "type": "module",

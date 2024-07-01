@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/guizimo/said-cli/compare/v0.0.8...v0.0.9) (2024-07-01)
+
+
+### Features
+
+* **template:** 新增electron-vue3-ts项目模版 ([e6ceab7](https://github.com/guizimo/said-cli/commit/e6ceab7f169e3f0e23e3c74a7bda26ff72309351))
+
 ### [0.0.8](https://github.com/guizimo/said-cli/compare/v0.0.7...v0.0.8) (2024-06-28)
 
 
