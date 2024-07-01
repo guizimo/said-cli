@@ -99,9 +99,10 @@ said-cli create my-new-project
 
 | 模板名称          | 模板简介                                  | 模版地址                                              |
 | ----------------- |---------------------------------------| ----------------------------------------------------- |
-| rollup-library-ts | `Rollup+Ts`项目模板，可用于快速开发命令行工具、库、插件等。   | https://github.com/SaidBaseTemplate/rollup-library-ts |
-| rollup-base-ts    | `Rollup+Ts`基础模版，快速搭建基于`Rollup+Ts`的模板，快速开发 | https://github.com/SaidBaseTemplate/rollup-base-ts    |
-|      vue3-ts             |            vue3-ts 是一个基于 Vite 和 TypeScript 的Vue3项目模板，可用于快速开发Vue3+Ts的前端项目                           |              https://github.com/SaidBaseTemplate/vue3-ts                                         |
+| rollup-library-ts | `Rollup + Ts`项目模板，可用于快速开发命令行工具、库、插件等。 | https://github.com/SaidBaseTemplate/rollup-library-ts |
+| rollup-base-ts    | `Rollup + Ts`基础模版，快速搭建基于`Rollup + Ts`的模板，快速开发 | https://github.com/SaidBaseTemplate/rollup-base-ts    |
+|      vue3-ts             |            `vue3-ts` 是一个基于` Vite` 和 `TypeScript` 的`Vue3`项目模板，可用于快速开发`Vue3 + Ts`的前端项目            |              https://github.com/SaidBaseTemplate/vue3-ts                                         |
+| electron-vue3-ts | `electron-vue3-ts` 是一个基于 `Vite` 、`Vue3`和 `TypeScript` 的`Electron`项目模板，可用于快速开发`Electron + Vue3 + Ts`的前端项目。 | https://github.com/SaidBaseTemplate/electron-vue3-ts.git |
 
 欢迎大家一起完善`said-cli`的模板！
 

@@ -16,6 +16,10 @@ export const templateMap = [
   {
     name: 'vue3-ts',
     value: 'vue3-ts'
+  },
+  {
+    name: 'electron-vue3-ts',
+    value: 'electron-vue3-ts'
   }
 ];
 
@@ -49,6 +53,18 @@ export const templateList = [
     name: 'vue3-ts',
     description: 'Vue3+Ts 基础模板',
     url: 'https://github.com/SaidBaseTemplate/vue3-ts.git',
+    successFn: (projectName: string) => {
+      logger.info('Run the following command to start the project:', true);
+      logger.info('', true);
+      logger.info(`cd ${projectName}`, true);
+      logger.info('npm i', true);
+      logger.info('npm run dev', true);
+    }
+  },
+  {
+    name: 'electron-vue3-ts',
+    description: 'Electron+Vue3+Ts 基础模板',
+    url: 'https://github.com/SaidBaseTemplate/electron-vue3-ts.git',
     successFn: (projectName: string) => {
       logger.info('Run the following command to start the project:', true);
       logger.info('', true);
