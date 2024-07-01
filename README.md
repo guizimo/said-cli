@@ -103,6 +103,7 @@ said-cli create my-new-project
 | rollup-base-ts    | `Rollup + Ts`基础模版，快速搭建基于`Rollup + Ts`的模板，快速开发 | https://github.com/SaidBaseTemplate/rollup-base-ts    |
 |      vue3-ts             |            `vue3-ts` 是一个基于` Vite` 和 `TypeScript` 的`Vue3`项目模板，可用于快速开发`Vue3 + Ts`的前端项目            |              https://github.com/SaidBaseTemplate/vue3-ts                                         |
 | electron-vue3-ts | `electron-vue3-ts` 是一个基于 `Vite` 、`Vue3`和 `TypeScript` 的`Electron`项目模板，可用于快速开发`Electron + Vue3 + Ts`的前端项目。 | https://github.com/SaidBaseTemplate/electron-vue3-ts.git |
+| vue3-uniapp-ts | `vue3-uniapp-ts` 是一个基于 `Uniapp` 和 `TypeScript` 的项目模板，可用于快速搭建项目。 | https://github.com/SaidBaseTemplate/vue3-uniapp-ts.git |
 
 欢迎大家一起完善`said-cli`的模板！
 
