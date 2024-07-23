@@ -49,6 +49,11 @@ const selectProjectAndDownload = async (projectName: string) => {
     const spinner = ora('Downloading template...').start();
     // 拉取git仓库代码
     gitClone(find.url, projectName, { checkout: 'main' }, () => {
+      // 删除 .git 文件夹
+      const gitDir = path.join(process.cwd(), '.git');
+      if (fs.existsSync(gitDir)) {
+        fs.rmdirSync(gitDir, { recursive: true });
+      }
       // 结束加载条并显示成功消息
       spinner.succeed(chalk.green.bold('The project was created successfully!'));
       // 展示信息
