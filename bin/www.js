@@ -35,7 +35,7 @@ class Commands {
 }
 
 var name = "said-cli";
-var version = "0.0.11";
+var version = "0.0.13";
 var description = "Quickly generate scaffolding for project templates";
 var main$1 = "bin/www.js";
 var type = "module";
@@ -315,10 +315,9 @@ const selectProjectAndDownload = async (projectName) => {
         // 拉取git仓库代码
         gitClone(find.url, projectName, { checkout: 'main' }, () => {
             // 删除 .git 文件夹
-            const gitDir = path.join(process.cwd(), '.git');
+            const gitDir = path.join(process.cwd(), `/${projectName}/.git`);
             if (fs.existsSync(gitDir)) {
-                fs.rmdirSync(gitDir, { recursive: true });
-                console.log(chalk.green.bold('The .git folder was deleted successfully!'));
+                fs.rmSync(gitDir, { recursive: true });
             }
             // 结束加载条并显示成功消息
             spinner.succeed(chalk.green.bold('The project was created successfully!'));

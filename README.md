@@ -64,7 +64,7 @@ npm link
 查看所有被链接的全局 `Node.js` 包
 
 ```shell
-npm ls- g --link
+npm ls -g --link
 ```
 
 删除项目中的链接

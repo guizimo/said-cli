@@ -50,9 +50,9 @@ const selectProjectAndDownload = async (projectName: string) => {
     // 拉取git仓库代码
     gitClone(find.url, projectName, { checkout: 'main' }, () => {
       // 删除 .git 文件夹
-      const gitDir = path.join(process.cwd(), '.git');
+      const gitDir = path.join(process.cwd(), `/${projectName}/.git`);
       if (fs.existsSync(gitDir)) {
-        fs.rmdirSync(gitDir, { recursive: true });
+        fs.rmSync(gitDir, { recursive: true });
       }
       // 结束加载条并显示成功消息
       spinner.succeed(chalk.green.bold('The project was created successfully!'));
