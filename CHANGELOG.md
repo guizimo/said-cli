@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.14](https://github.com/guizimo/said-cli/compare/v0.0.13...v0.0.14) (2024-07-23)
+
+
+### Bug Fixes
+
+* **command:** 修复拉取模版后还有.git目录的问题 ([a02d6ea](https://github.com/guizimo/said-cli/commit/a02d6ea4a53d4b479cc3b7b1b9cd735e5c48748c)), closes [#3](https://github.com/guizimo/said-cli/issues/3)
+
 ### [0.0.13](https://github.com/guizimo/said-cli/compare/v0.0.12...v0.0.13) (2024-07-23)
 
 ### [0.0.12](https://github.com/guizimo/said-cli/compare/v0.0.11...v0.0.12) (2024-07-23)
