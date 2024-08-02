@@ -4,22 +4,29 @@ layout: home
 
 hero:
   name: "Said Cli"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  text: "一个快速创建项目模板的脚手架"
+  tagline: 丰富的模版，开箱即用
+  image:
+    src: /said.svg
+    alt: Said Cli
   actions:
+    
     - theme: brand
-      text: Markdown Examples
+      text: 什么是Said Cli
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: 快速开始
       link: /api-examples
+    - theme: alt
+      text: Github
+      link: https://github.com/guizimo/said-cli
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 专注
+    details: 只需一行代码即可快速创建项目
+  - title: 丰富的模版
+    details: 支持Vue3、React、uniapp、Electron等多种模版
+  - title: 开箱即用
+    details: 配置好了lint，prettier，husky，commitlint等
 ---
 

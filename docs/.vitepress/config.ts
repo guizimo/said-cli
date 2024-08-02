@@ -5,6 +5,7 @@ export default defineConfig({
   base: '/said-cli/',
   title: 'Said Cli',
   description: 'A VitePress Site',
+  head: [['link', { rel: 'icon', href: '/said-cli/said.ico' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -22,6 +23,6 @@ export default defineConfig({
       }
     ],
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }]
+    socialLinks: [{ icon: 'github', link: 'https://github.com/guizimo/said-cli' }]
   }
 });
