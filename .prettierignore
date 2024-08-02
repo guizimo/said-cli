@@ -7,3 +7,5 @@
 *.md
 *.json
 bin
+
+docs/.vitepress/cache
