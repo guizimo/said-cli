@@ -8,4 +8,4 @@
 *.json
 bin
 
-docs/.vitepress/cache
+docs/.vitepress/cache/**

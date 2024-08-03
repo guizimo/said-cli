@@ -273,8 +273,8 @@ import {
   watchTriggerable,
   watchWithFilter,
   whenever
-} from './chunk-KYAROGHR.js';
-import './chunk-XILDEMAI.js';
+} from "./chunk-KYAROGHR.js";
+import "./chunk-XILDEMAI.js";
 export {
   DefaultMagicKeysAliasMap,
   StorageSerializers,

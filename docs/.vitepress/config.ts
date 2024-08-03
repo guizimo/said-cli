@@ -8,9 +8,17 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: '/said-cli/said.ico' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
+    search: {
+      provider: 'local'
+    },
+
     nav: [
       { text: '导航', link: '/' },
-      { text: '模版', link: '/template/index' }
+      {
+        text: '模版',
+        items: [{ text: 'Vue 3', link: '/template/vue3' }]
+      }
     ],
 
     sidebar: [
